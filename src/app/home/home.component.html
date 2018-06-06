@@ -1,0 +1,15 @@
+<main class="main">
+	<ul class="main-list">
+		<li *ngFor="let item of list.results; let idx = index" class="main-list-li">
+			<a  (click)="getPokemon(item.url)" class="list-li-button">
+				<span class="li-button-index"> {{ idx + 1 }}</span>
+				<span>{{ item.name }}</span>
+			</a>
+		</li>
+	</ul>
+
+	<div class="pages center">
+		<a><img src="../../assets/img/back-icon.svg" class="icon" (click)="backPage()"></a>
+		<a><img src="../../assets/img/back-icon.svg" class="icon next" (click)="nextPage()"></a>
+	</div>
+</main>

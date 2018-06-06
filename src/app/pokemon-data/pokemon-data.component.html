@@ -1,0 +1,23 @@
+<main class="main">
+	<div class="center">
+		<img src="{{ pokemon.sprites.front_default }}">
+	</div>
+
+	<div class="center vertical-pedding-little">
+		<h2>{{ 'Nome: ' + pokemon.name }}</h2>
+	</div>
+
+	<div class="center vertical-pedding-little">
+		<h3>Habilidade</h3>
+	</div>
+
+	<div *ngFor="let item of pokemon.abilities" class="center vertical-pedding-little">
+		<span>
+			{{ item.ability.name }}
+		</span>
+	</div>
+
+	<a (click)="back()" class="main-back center">
+		<img src="../../assets/img/back-icon.svg" class="icon">
+	</a>
+</main>
